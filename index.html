@@ -1,11 +1,925 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Blanchard</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/media.css">
+    <script defer src="js/accardion.js"></script>
 </head>
 <body>
-
+    <header>
+        <section class="header">
+            <div class="header__container container">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="#">
+                        <img class="logo__img" src="img/blacnchardLogo.svg" alt="Blanchard">
+                    </a>
+                    <h1 class="visually-hidden">Художественная галерея</h1>
+                </div>
+                <nav class="header__nav nav-section nav">
+                    <ol class="nav-section__list nav__list">
+                        <li class="nav-section__item nav__item"><a href="#about" class="nav-section__link nav__link link">О нас</a></li>
+                        <li class="nav-section__item nav__item"><a href="#gallery" class="nav-section__link nav__link link">Галерея</a></li>
+                        <li class="nav-section__item nav__item"><a href="#catalog" class="nav-section__link nav__link link">Каталог</a></li>
+                        <li class="nav-section__item nav__item"><a href="#events" class="nav-section__link nav__link link">События</a></li>
+                        <li class="nav-section__item nav__item"><a href="#edition" class="nav-section__link nav__link link">Издания</a></li>
+                        <li class="nav-section__item nav__item"><a href="#project" class="nav-section__link nav__link link">Проекты</a></li>
+                        <li class="nav-section__item nav__item"><a href="#contacts" class="nav-section__link nav__link link">Контакты</a></li>
+                    </ol>
+                </nav>
+                <div class="header__login login">
+                    <a href="#" class="login__link link">
+                        <span class="login__img">
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+                            </svg>
+                        </span>
+                        <span class="login__text">Войти</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <aside class="ads">
+            <section class="navigation">
+                <div class="navigation__container container">
+                    <h2 class="visually-hidden">Навигационное меню по сайту</h2>
+                    <nav class="navigation__nav nav-page nav">
+                        <ol class="nav-page__list nav__list">
+                            <li class="nav-page__item nav__item nav-page-select">
+                                <h3 class="nav-page__title"><a href="#" class="nav-page__link nav__link link">Реализм</a></h3>
+                                <ol class="nav-page-select__wrapper-list list">
+                                    <li class="nav-page-select__wrapper-item">
+                                        <ol class="nav-page-select__list">
+                                            <li class="nav-page-select__item nav-page-select__realism1">
+                                                <h3 class="nav-page-select__title">Тинторетто</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__realism2">
+                                                <h3 class="nav-page-select__title">Фридрих</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__realism3">
+                                                <h3 class="nav-page-select__title">Леонардо</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__realism4">
+                                                <h3 class="nav-page-select__title">Верроккьо</h3>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="nav-page__item nav__item nav-page-select">
+                                <h3 class="nav-page__title"><a href="#" class="nav-page__link nav__link link">Импрессионизм</a></h3>
+                                <ol class="nav-page-select__wrapper-list list">
+                                    <li class="nav-page-select__wrapper-item">
+                                        <ol class="nav-page-select__list">
+                                            <li class="nav-page-select__item nav-page-select__impressionism1">
+                                                <h3 class="nav-page-select__title">Моне</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__impressionism2">
+                                                <h3 class="nav-page-select__title">Сислей</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__impressionism3">
+                                                <h3 class="nav-page-select__title">Мане</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__impressionism4">
+                                                <h3 class="nav-page-select__title">Ренуар</h3>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="nav-page__item nav__item nav-page-select">
+                                <h3 class="nav-page__title"><a href="#" class="nav-page__link nav__link link">Постимпрессионизм</a></h3>
+                                <ol class="nav-page-select__wrapper-list list">
+                                    <li class="nav-page-select__wrapper-item">
+                                        <ol class="nav-page-select__list">
+                                            <li class="nav-page-select__item nav-page-select__post-impressionism1">
+                                                <h3 class="nav-page-select__title">Ван&nbsp;Гог</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__post-impressionism2">
+                                                <h3 class="nav-page-select__title">Сезанн</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__post-impressionism3">
+                                                <h3 class="nav-page-select__title">Гоген</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__post-impressionism4">
+                                                <h3 class="nav-page-select__title">Сёра</h3>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="nav-page__item nav__item nav-page-select">
+                                <h3 class="nav-page__title"><a href="#" class="nav-page__link nav__link link">Авангард</a></h3>
+                                <ol class="nav-page-select__wrapper-list list">
+                                    <li class="nav-page-select__wrapper-item">
+                                        <ol class="nav-page-select__list">
+                                            <li class="nav-page-select__item nav-page-select__vanguard1">
+                                                <h3 class="nav-page-select__title">Кандинский</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__vanguard2">
+                                                <h3 class="nav-page-select__title">Маринетти</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__vanguard3">
+                                                <h3 class="nav-page-select__title">Малевич</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__vanguard4">
+                                                <h3 class="nav-page-select__title">Пикассо</h3>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="nav-page__item nav__item nav-page-select">
+                                <h3 class="nav-page__title"><a href="#" class="nav-page__link nav__link link">Футуризм</a></h3>
+                                <ol class="nav-page-select__wrapper-list list">
+                                    <li class="nav-page-select__wrapper-item">
+                                        <ol class="nav-page-select__list">
+                                            <li class="nav-page-select__item nav-page-select__futurism1">
+                                                <h3 class="nav-page-select__title">Карра</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__futurism2">
+                                                <h3 class="nav-page-select__title">Прателла</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__futurism3">
+                                                <h3 class="nav-page-select__title">Северини</h3>
+                                            </li>
+                                            <li class="nav-page-select__item nav-page-select__futurism4">
+                                                <h3 class="nav-page-select__title">Балла</h3>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="navigation__search search">
+                        <label class="search__label">
+                            <svg class="search__img" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z" fill="white"/>
+                            </svg>
+                            <input class="search__input" type="text" placeholder="Поиск по сайту">
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="mail-subscribe">
+                <div class="mail-subscribe__container container">
+                    <h2 class="mail-subscribe__title title">Прикоснитесь к&nbsp;прекрасному</h2>
+                    <p class="mail-subscribe__text description">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+                    <a href="#contacts" class="mail-subscribe__link link">Подписаться на рассылку</a>
+                </div>
+            </section>
+        </aside>
+        <section id="about" class="about">
+            <div class="about__container container">
+                <h2 class="about__title title">О нас</h2>
+                <p class="about__text description">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
+            </div>
+        </section>
+        <section id="gallery" class="gallery">
+            <div class="gallery__container container">
+                <div class="gallery__information">
+                    <h2 class="gallery__title title">Галерея</h2>
+                    <div class="gallery__filter gallery-filter">
+                        <p class="gallery-filter__text description">Фильтр:</p>
+                        <select name="" id="" class="gallery-filter__select">
+                            <option value="painting" class="gallery-filter__option">Живопись</option>
+                            <option value="drawing" class="gallery-filter__option">Рисунок</option>
+                            <option value="sculpture" class="gallery-filter__option">Скульптура</option>
+                        </select>
+                    </div>
+                    <p class="gallery__text description">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний
+                        <a href="#" class="strong-link link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+                </div>
+                <div class="gallery__pictures gallery-pictures">
+                    <div class="gallery__slider gallery-slider">
+                        <button class="btn__prev btn"></button>
+                        <span class="gallery-slider__count">1 / 2</span>
+                        <button class="btn__next btn"></button>
+                    </div>
+                    <div class="gallery-pictures__wrapper">
+                        <ol class="gallery__list gallery-pictures__list-painting">
+                            <li class="gallery__item">1</li>
+                            <li class="gallery__item">2</li>
+                            <li class="gallery__item">3</li>
+                            <li class="gallery__item">4</li>
+                            <li class="gallery__item">5</li>
+                            <li class="gallery__item">6</li>
+                        </ol>
+                        <ol class="gallery__list gallery-pictures__list-drawing">
+                            <li class="gallery__item">1</li>
+                            <li class="gallery__item">2</li>
+                            <li class="gallery__item">test</li>
+                            <li class="gallery__item">4</li>
+                            <li class="gallery__item">5</li>
+                            <li class="gallery__item">6</li>
+                        </ol>
+                        <ol class="gallery__list gallery-pictures__list-sculpture">
+                            <li class="gallery__item">1</li>
+                            <li class="gallery__item">2</li>
+                            <li class="gallery__item">35</li>
+                            <li class="gallery__item">4</li>
+                            <li class="gallery__item">5</li>
+                            <li class="gallery__item">6</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="catalog" class="catalog">
+            <div class="catalog__container container">
+                <div class="catalog__header-wrapper">
+                    <h2 class="catalog__title title">Каталог</h2>
+                    <form class="catalog__country catalog-country">
+                        <label class="catalog-country__label">
+                            <input type="radio" name="country" class="catalog-country__input" id="france">
+                            <span class="catalog-country__img-wrapper">
+                            <img class="catalog-country__img" src="img/franceFlag.png" alt="flag of France">
+                        </span>
+                        </label>
+                        <label class="catalog-country__label">
+                            <input type="radio" name="country" class="catalog-country__input" id="germany">
+                            <span class="catalog-country__img-wrapper">
+                            <img class="catalog-country__img" src="img/germanyFlag.png" alt="flag of Germany">
+                        </span>
+                        </label>
+                        <label class="catalog-country__label">
+                            <input type="radio" name="country" class="catalog-country__input" id="italy" checked>
+                            <span class="catalog-country__img-wrapper">
+                            <img class="catalog-country__img" src="img/italyFlag.png" alt="flag of Italy">
+                        </span>
+                        </label>
+                        <label class="catalog-country__label">
+                            <input type="radio" name="country" class="catalog-country__input" id="rus">
+                            <span class="catalog-country__img-wrapper">
+                            <img class="catalog-country__img" src="img/franceFlag.png" alt="flag of idk">
+                        </span>
+                        </label>
+                        <label class="catalog-country__label">
+                            <input type="radio" name="country" class="catalog-country__input" id="belgium">
+                            <span class="catalog-country__img-wrapper">
+                            <img class="catalog-country__img" src="img/belgiumFlag.png" alt="flag of Belgium">
+                        </span>
+                        </label>
+                    </form>
+                </div>
+                <p class="catalog__text description">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.</p>
+                <div class="catalog__main-wrapper">
+                    <div class="catalog__person-information catalog-person-information">
+                        <picture class="catalog-person-information__img">
+                            <source media="(max-width:1465px)" srcset="img/personIMG1400.jpg">
+                            <img src="img/personIMG.jpg" alt="Доменико Гирландайо">
+                        </picture>
+                        <h3 class="catalog-person-information__title title">Доменико Гирландайо</h3>
+                        <p class="catalog-person-information__text description"><span class="catalog-person-information__date"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">&nbsp;11&nbsp;января&nbsp;1494.</time></span>
+                            Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+                    </div>
+                    <div class="catalog__person-select catalog-person-select">
+                        <ol class="catalog-person-select__list list">
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1400">1400 </time>по <time datetime="1499">1499 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                        </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1500">1500 </time>по <time datetime="1599">1599 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1600">1600 </time>по <time datetime="1699">1699 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1700">1700 </time>по <time datetime="1799">1799 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1800">1800 </time>по <time datetime="1899">1899 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="1900">1900 </time>по <time datetime="1999">1999 </time>гг.</p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li class="catalog-person-select__item">
+                                <p class="catalog-person-select__text">C <time datetime="2000">2000 г.</time></p>
+                                <div class="catalog-person-container">
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                    </ol>
+                                    <ol class="catalog-person-container__lists">
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="events" class="events">
+            <div class="events__container container">
+                <h2 class="events__title title">События</h2>
+                <ol class="events__list list">
+                    <li class="events__item events-item">
+                        <figure class="events-item__figure">
+                            <picture class="events-item__picture">
+                                <source media="(max-width: 1500px)" srcset="img/events/pic1Midle.jpg">
+                                <img class="events-item__img" src="img/events/pic1Full.jpg" alt="Decorative image showing upcoming events">
+                            </picture>
+                            <figcaption class="events-item__figcaption figcaption"><span class="figcaption__text">Музей им. Щусева </span>с&nbsp;<time datetime="2023-03-20">20&nbsp;марта&nbsp;</time>по&nbsp;<time datetime="2023-04-30">30&nbsp;апреля</time></figcaption>
+                        </figure>
+                        <h3 class="events-item__title title">Книжная гравюра в живом восприятии</h3>
+                        <p class="events-item__text description">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
+                        <a href="#" class="events-item__link link">Подробнее</a>
+                    </li>
+                    <li class="events__item events-item">
+                        <figure class="events-item__figure">
+                            <picture class="events-item__picture">
+                                <source media="(max-width: 1500px)" srcset="img/events/pic2Midle.jpg">
+                                <img class="events-item__img" src="img/events/pic2Full.jpg" alt="Decorative image showing upcoming events">
+                            </picture>
+                            <figcaption class="events-item__figcaption figcaption"><span class="figcaption__text">ММОМА </span><time datetime="2023-03-24T19:00:00Z">24 марта 19:00</time></figcaption>
+                        </figure>
+                        <h3 class="events-item__title title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+                        <p class="events-item__text description">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                        <a href="#" class="events-item__link link">Подробнее</a>
+                    </li>
+                    <li class="events__item events-item">
+                        <figure class="events-item__figure">
+                            <picture class="events-item__picture">
+                                <source media="(max-width: 1500px)" srcset="img/events/pic3Midle.jpg">
+                                <img class="events-item__img" src="img/events/pic3Full.jpg" alt="Decorative image showing upcoming events">
+                            </picture>
+                            <figcaption class="events-item__figcaption figcaption"><span class="figcaption__text">Еврейский музей </span>c&nbsp;<time datetime="2023-03-31">31 марта </time>по&nbsp;<time datetime="2023-04-21">21&nbsp;апреля</time></figcaption>
+                        </figure>
+                        <h3 class="events-item__title title">Выставка &laquo;Формация 2023&raquo;</h3>
+                        <p class="events-item__text description">Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
+                        <a href="#" class="events-item__link link">Подробнее</a>
+                    </li>
+                </ol>
+                <button class="events__btn btn-action btn">Все события</button>
+            </div>
+        </section>
+        <section id="edition" class="edition">
+            <div class="edition__container container">
+                <h2 class="edition__title title">Издания</h2>
+                <div class="edition__wrapper">
+                    <form class="edition__form edition-form">
+                        <h4 class="edition-form__title">Категории</h4>
+                        <ol class="edition-form__list list">
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="bestsellers">
+                                    <span class="edition-form-item__text">Бестселлеры</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="art">
+                                    <span class="edition-form-item__text">Искусство</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="architecture">
+                                    <span class="edition-form-item__text">Архитектура</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="architecture">
+                                    <span class="edition-form-item__text">Архитектура</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="design">
+                                    <span class="edition-form-item__text">Дизайн</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="fashion">
+                                    <span class="edition-form-item__text">Мода</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="children">
+                                    <span class="edition-form-item__text">Детям</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="fiction">
+                                    <span class="edition-form-item__text">Художественная литература</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="journalism">
+                                    <span class="edition-form-item__text">Публицистика</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="guides">
+                                    <span class="edition-form-item__text">Путеводители</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="guides">
+                                    <span class="edition-form-item__text">Путеводители</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="philosophy">
+                                    <span class="edition-form-item__text">Философия</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="educational">
+                                    <span class="edition-form-item__text">Учебная литература</span>
+                                </label>
+                            </li>
+                            <li class="edition-form__item edition-form-item">
+                                <label>
+                                    <input type="checkbox" class="edition-form-item__input" name="newspapers">
+                                    <span class="edition-form-item__text">Журналы и газеты</span>
+                                </label>
+                            </li>
+                        </ol>
+                        <h4 class="edition-form__title">Цена</h4>
+                        <div class="edition-form__select-price select-price">
+                            <label>
+                                <span class="select-price__text">От</span>
+                                <input class="select-price__input" type="text">
+                            </label>
+                            <label>
+                                <span class="select-price__text">до</span>
+                                <input class="select-price__input" type="text">
+                            </label>
+                            <span class="select-price__text">$</span>
+                        </div>
+                    </form>
+                    <div class="edition__offers edition-offers">
+                        <div class="edition__slider edition-slider">
+                            <button class="btn__prev btn"></button>
+                            <span class="edition-slider__count">1 / 3</span>
+                            <button class="btn__next btn"></button>
+                        </div>
+                        <ol class="edition-offers__list list">
+                            <li class="edition-offers__item">
+                                <picture class="edition-offers__img">
+                                    <img src="img/edition/pic1Midle.jpg" alt="Искусство цвета обложка">
+                                </picture>
+                                <div class="edition-offers__text-wrapper">
+                                    <h3 class="edition-offers__title">Искусство цвета</h3>
+                                    <p class="edition-offers__text description">Иттен, Иоханнес</p>
+                                    <span class="edition-offers__price">620 руб</span>
+                                </div>
+                                <button class="edition-offers__btn btn">Заказать</button>
+                            </li>
+                            <li class="edition-offers__item">
+                                <picture class="edition-offers__img">
+                                    <img src="img/edition/pic2Midle.jpg" alt="Типографика обложка">
+                                </picture>
+                                <div class="edition-offers__text-wrapper">
+                                    <h3 class="edition-offers__title">Типографика</h3>
+                                    <p class="edition-offers__text description">Рудер, Эмиль</p>
+                                    <span class="edition-offers__price">2 450 руб</span>
+                                </div>
+                                <button class="edition-offers__btn btn">Заказать</button>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="project" class="project">
+            <div class="project__container container">
+                <h2 class="project__title title">Проекты</h2>
+                <p class="project__text project-text description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистско <span class="project-text__tool-tip tool-tip" title="Пример современных тенденций - современная методология разработки"><span class="tool-tip__text" aria-hidden="true">Пример современных тенденций - современная методология разработки</span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="project-text__tool-tip tool-tip" title="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"><span class="tool-tip__text" aria-hidden="true">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="project-text__tool-tip tool-tip" title="В стремлении повысить качество "><span class="tool-tip__text" aria-hidden="true">В стремлении повысить качество </span></span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#about" class="project__link">blanchard-art.ru/projects/about</a></p>
+                <div class="project__partners project-partners">
+                    <h3 class="project-partners__title">Партнёры проектов:</h3>
+                    <div class="project-partners__content">
+                        <button class="project-partners__btn btn__prev btn"></button>
+                        <ol class="project-partners__list list">
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner1.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner2.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner3.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner4.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner5.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner6.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner7.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner8.png" alt="" class="project-partners__img">
+                            </li>
+                            <li class="project-partners__item">
+                                <img src="img/project-partners/partner9.png" alt="" class="project-partners__img">
+                            </li>
+                        </ol>
+                        <button class="project-partners__btn btn__next btn"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="contacts__title title ">Контакты</h2>
+            </div>
+            <div class="contacts__main">
+                <div class="contacts__main-content">
+                    <h3 class="contacts__address-title address-title">Шоурум №4 <span class="address-title__span">Леонтьевский переулок, дом 5/1</span></h3>
+                    <div class="contacts__map">
+                        <iframe src="https://maps.google.com/maps?q=55.75912400276326,37.60275905263654&z=16&output=embed" height="100%" width="100%" style="border:0" loading="lazy"></iframe>
+                    </div>
+                    <form class="contacts__form contacts-form">
+                        <h4 class="contacts-form__title">Заказать обратный звонок</h4>
+                        <input type="text" class="contacts-form__input" placeholder="Имя*" required>
+                        <input type="text" class="contacts-form__input" placeholder="Телефон*" required>
+                        <button type="submit" class="contacts-form__btn btn-action btn">Заказать</button>
+                    </form>
+                    <p class="contacts__text">Связаться в один клик</p>
+                    <ol class="contacts__list list">
+                        <li class="contacts__item">
+                            <a href="#" class="contacts__link link">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136320_1941)">
+                                        <path d="M30 59.0625C46.0508 59.0625 59.0625 46.0508 59.0625 30C59.0625 13.9492 46.0508 0.9375 30 0.9375C13.9492 0.9375 0.9375 13.9492 0.9375 30C0.9375 46.0508 13.9492 59.0625 30 59.0625Z" fill="#30BF39"/>
+                                        <path d="M38.8124 32.6265C38.4374 32.439 36.4686 31.314 36.0936 31.2202C35.7186 31.0327 35.4374 31.0327 35.1561 31.4077C34.8749 31.7827 34.0311 32.7202 33.8436 32.9077C33.5624 33.189 33.3749 33.189 32.9999 33.0015C32.6249 32.814 31.3124 32.3452 29.8124 30.8452C28.6874 29.7202 27.8436 28.4077 27.6561 27.939C27.4686 27.564 27.6561 27.2827 27.8436 27.0952C28.0311 26.9077 28.2186 26.6265 28.4999 26.439C28.7811 26.2515 28.7811 26.064 28.9686 25.7827C29.1561 25.5015 29.0624 25.314 28.9686 25.0327C28.8749 24.7515 28.1249 22.7827 27.8436 21.939C27.5624 21.0952 27.1874 21.2827 26.9999 21.189C26.7186 21.189 26.5311 21.0952 26.2499 21.0952C25.8749 21.0952 25.4061 21.2827 25.1249 21.564C24.7499 21.939 23.6249 22.8765 23.6249 24.8452C23.6249 26.814 24.9374 28.8765 25.1249 29.064C25.3124 29.3452 27.7499 33.6577 31.7811 35.439C35.8124 37.2202 35.8124 36.6577 36.5624 36.6577C37.3124 36.6577 38.9999 35.7202 39.3749 34.8765C39.7499 33.939 39.7499 33.0952 39.6561 33.0015C39.4686 33.0015 39.1874 32.9077 38.8124 32.6265ZM31.3124 42.2827C28.6874 42.2827 26.2499 41.5327 24.0936 40.1265L19.0311 41.7202L20.7186 36.8452C19.1249 34.5952 18.1874 31.8765 18.1874 29.064C18.1874 21.7515 24.0936 15.8452 31.4061 15.8452C38.7186 15.8452 44.5311 21.7515 44.5311 29.064C44.5311 36.3765 38.6249 42.2827 31.3124 42.2827ZM31.3124 13.2202C22.5936 13.2202 15.4686 20.3452 15.4686 29.064C15.4686 31.9702 16.2186 34.7827 17.7186 37.2202L14.8124 45.7515L23.6249 42.939C25.9686 44.2515 28.5936 44.9077 31.3124 44.9077C40.0311 44.9077 47.1561 37.7827 47.1561 29.064C47.1561 20.3452 40.1249 13.2202 31.3124 13.2202Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_136320_1941">
+                                            <rect width="60" height="60" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="contacts__item">
+                            <a href="#" class="contacts__link link">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_136320_1944)">
+                                        <path d="M30 60C46.5685 60 60 46.5685 60 30C60 13.4315 46.5685 0 30 0C13.4315 0 0 13.4315 0 30C0 46.5685 13.4315 60 30 60Z" fill="url(#paint0_linear_136320_1944)"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5794 29.6834L31.0748 22.1474C39.4062 18.6821 41.1373 18.0801 42.2657 18.0603C42.5139 18.0559 43.0688 18.1174 43.4282 18.4091C43.7318 18.6553 43.8152 18.9881 43.8552 19.2215C43.8952 19.4549 43.9449 19.9869 43.9054 20.4025C43.4539 25.1461 41.5003 36.6579 40.5065 41.9709C40.0859 44.2191 39.2585 44.9729 38.4563 45.0467C36.7141 45.207 35.3912 43.8953 33.7038 42.7892L27.0088 38.292C24.0468 36.3402 25.9669 35.2674 27.655 33.5142C28.0967 33.0552 35.7727 26.0734 35.9212 25.44C35.9392 25.3608 35.957 25.0656 35.7816 24.9096C35.6062 24.7536 35.3472 24.8076 35.1604 24.8495C34.8956 24.9096 30.6776 27.6975 22.5063 33.2135C21.309 34.0356 20.2245 34.4363 19.2529 34.4153C18.1817 34.3921 16.1213 33.8096 14.5895 33.3117C12.7108 32.701 11.2175 32.3781 11.3476 31.3409C11.4153 30.8007 12.1592 30.2483 13.5794 29.6835L13.5794 29.6834Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_136320_1944" x1="30" y1="0" x2="30" y2="59.555" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#2AABEE"/>
+                                            <stop offset="1" stop-color="#229ED9"/>
+                                        </linearGradient>
+                                        <clipPath id="clip0_136320_1944">
+                                            <rect width="60" height="60" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <div class="footer__container container">
+                <div class="footer__logo logo">
+                    <a class="logo__link" href="#">
+                        <img class="logo__img" src="img/blacnchardLogo.svg" alt="Blanchard">
+                    </a>
+                </div>
+                <ol class="footer__list list">
+                    <li class="footer__item"><a href="#" class="footer__link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 0C13.432 0 0 13.4314 0 30C0 46.5686 13.432 60 30 60C46.568 60 60 46.5686 60 30C60 13.4314 46.568 0 30 0ZM45.2176 33.2446C46.6159 34.6103 48.0951 35.8957 49.3504 37.4026C49.9065 38.0692 50.4307 38.7585 50.8297 39.5337C51.3993 40.6392 50.8849 41.8515 49.8954 41.9171L43.7494 41.9159C42.162 42.0473 40.8988 41.4071 39.8339 40.3218C38.9837 39.457 38.195 38.5332 37.3762 37.6389C37.0416 37.2718 36.6893 36.9262 36.2695 36.6543C35.4316 36.1093 34.7036 36.2762 34.2236 37.1515C33.7344 38.0421 33.6227 39.0292 33.5761 40.0205C33.5092 41.4697 33.0721 41.8484 31.618 41.9165C28.5109 42.062 25.5628 41.5906 22.8227 40.0241C20.4055 38.6425 18.5346 36.6924 16.9043 34.4845C13.7297 30.1805 11.2984 25.4566 9.11386 20.597C8.6222 19.5026 8.98189 18.917 10.1893 18.8943C12.1952 18.8557 14.2011 18.8606 16.2071 18.8925C17.0234 18.9054 17.5636 19.3725 17.8772 20.1428C18.9612 22.8098 20.2901 25.3473 21.9554 27.7007C22.3992 28.3274 22.8522 28.9522 23.4973 29.3948C24.2093 29.8834 24.7519 29.7219 25.0877 28.9271C25.3025 28.4219 25.3952 27.8817 25.4418 27.3404C25.6014 25.486 25.6205 23.6323 25.3442 21.7854C25.1724 20.6296 24.5224 19.8832 23.3702 19.6647C22.7834 19.5536 22.8694 19.3363 23.1548 19.0011C23.6501 18.4217 24.1142 18.0632 25.0416 18.0632L31.9857 18.062C33.0801 18.2768 33.3256 18.7679 33.4742 19.8703L33.4803 27.5871C33.4674 28.0137 33.6945 29.2782 34.4606 29.5574C35.0744 29.76 35.4795 29.2677 35.8465 28.8792C37.5118 27.112 38.6983 25.0263 39.7608 22.8675C40.2298 21.9155 40.6343 20.9303 41.0271 19.9433C41.3193 19.2135 41.7735 18.8544 42.5972 18.8667L49.2841 18.8747C49.4811 18.8747 49.6812 18.8765 49.8764 18.9103C51.0034 19.103 51.3121 19.5879 50.9635 20.6873C50.4147 22.4145 49.3485 23.8533 48.3063 25.2958C47.1892 26.8401 45.9977 28.3304 44.8917 29.8815C43.8752 31.2994 43.9556 32.0133 45.2176 33.2446Z" fill="#CACACA"/>
+                        </svg>
+                    </a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_136320_1924)">
+                                <path d="M24.2578 30C24.2578 33.1714 26.8286 35.7422 30 35.7422C33.1714 35.7422 35.7422 33.1714 35.7422 30C35.7422 26.8286 33.1714 24.2578 30 24.2578C26.8286 24.2578 24.2578 26.8286 24.2578 30Z" fill="#CACACA"/>
+                                <path d="M16.5712 19.8403C16.8472 19.0923 17.2876 18.4153 17.8598 17.8596C18.4155 17.2874 19.0921 16.847 19.8405 16.571C20.4475 16.3352 21.3594 16.0546 23.0389 15.9781C24.8558 15.8953 25.4005 15.8774 30.0001 15.8774C34.6002 15.8774 35.1449 15.8948 36.9613 15.9777C38.6409 16.0546 39.5532 16.3352 40.1597 16.571C40.9082 16.847 41.5852 17.2874 42.1405 17.8596C42.7127 18.4153 43.153 19.0919 43.4295 19.8403C43.6653 20.4473 43.9459 21.3596 44.0223 23.0392C44.1052 24.8556 44.123 25.4003 44.123 30.0004C44.123 34.6 44.1052 35.1447 44.0223 36.9616C43.9459 38.6411 43.6653 39.553 43.4295 40.16C43.153 40.9084 42.7131 41.585 42.1409 42.1407C41.5852 42.7129 40.9086 43.1533 40.1602 43.4293C39.5532 43.6655 38.6409 43.9461 36.9613 44.0226C35.1449 44.1054 34.6006 44.1228 30.0006 44.1228C25.4001 44.1228 24.8553 44.1054 23.0394 44.0226C21.3598 43.9461 20.4475 43.6655 19.8405 43.4293C18.3381 42.8498 17.1507 41.6624 16.5712 40.16C16.3354 39.553 16.0548 38.6411 15.9779 36.9616C15.8951 35.1447 15.8777 34.6 15.8777 30.0004C15.8777 25.4003 15.8951 24.8556 15.9779 23.0392C16.0544 21.3596 16.335 20.4473 16.5712 19.8403ZM30.0001 38.8457C34.8858 38.8457 38.8464 34.8856 38.8464 29.9999C38.8464 25.1142 34.8858 21.1541 30.0001 21.1541C25.1149 21.1541 21.1543 25.1142 21.1543 29.9999C21.1543 34.8856 25.1149 38.8457 30.0001 38.8457ZM20.8046 22.8716C21.9462 22.8716 22.8718 21.946 22.8718 20.8044C22.8718 19.6627 21.9462 18.7371 20.8046 18.7371C19.6629 18.7371 18.7373 19.6627 18.7373 20.8044C18.7378 21.946 19.6629 22.8716 20.8046 22.8716Z" fill="#CACACA"/>
+                                <path d="M30 0C46.566 0 60 13.434 60 30C60 46.566 46.566 60 30 60C13.434 60 0 46.566 0 30C0 13.434 13.434 0 30 0ZM12.8773 37.1022C12.9607 38.936 13.2523 40.188 13.678 41.2839C14.5729 43.5979 16.4021 45.4271 18.7161 46.322C19.8116 46.7477 21.064 47.0389 22.8973 47.1227C24.7343 47.2064 25.3212 47.2266 29.9995 47.2266C34.6783 47.2266 35.2647 47.2064 37.1022 47.1227C38.9355 47.0389 40.188 46.7477 41.2834 46.322C42.4333 45.8894 43.4743 45.2115 44.3349 44.3349C45.211 43.4747 45.889 42.4333 46.3216 41.2839C46.7473 40.1884 47.0389 38.936 47.1222 37.1027C47.2069 35.2652 47.2266 34.6783 47.2266 30C47.2266 25.3217 47.2069 24.7348 47.1227 22.8978C47.0393 21.064 46.7482 19.812 46.3225 18.7161C45.8899 17.5667 45.2115 16.5253 44.3349 15.6651C43.4747 14.7885 42.4333 14.1106 41.2839 13.678C40.188 13.2523 38.936 12.9611 37.1022 12.8773C35.2652 12.7936 34.6783 12.7734 30 12.7734C25.3217 12.7734 24.7348 12.7936 22.8978 12.8778C21.064 12.9611 19.812 13.2523 18.7161 13.6775C17.5667 14.1101 16.5253 14.7885 15.6647 15.6651C14.7885 16.5257 14.1101 17.5667 13.678 18.7161C13.2518 19.812 12.9607 21.064 12.8769 22.8978C12.7931 24.7348 12.7734 25.3217 12.7734 30C12.7734 34.6783 12.7931 35.2652 12.8773 37.1022Z" fill="#CACACA"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_136320_1924">
+                                    <rect width="60" height="60" fill="white" transform="matrix(-1 0 0 1 60 0)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 0C13.5 0 0 13.5241 0 30.1807C0 45.241 10.98 57.741 25.32 60V38.9157H17.7V30.1807H25.32V23.5241C25.32 15.9639 29.79 11.8072 36.66 11.8072C39.93 11.8072 43.3499 12.3795 43.3499 12.3795V19.8193H39.57C35.85 19.8193 34.68 22.1386 34.68 24.5181V30.1807H43.0199L41.6699 38.9157H34.68V60C41.7493 58.8791 48.1866 55.2576 52.8297 49.7893C57.4729 44.3211 60.016 37.3664 59.9999 30.1807C59.9999 13.5241 46.4999 0 30 0Z" fill="#CACACA"/>
+                        </svg>
+                    </a></li>
+                </ol>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,9 @@
+@media (max-width: 1280px) {
+
+    :root {
+
+        /*body*/
+        --pageMargin: 50px;
+
+    }
+}
