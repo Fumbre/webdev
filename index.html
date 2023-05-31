@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/media.css">
     <script defer src="js/accardion.js"></script>
+    <script defer src="js/partners-rolo.js"></script>
 </head>
 <body>
     <header>
@@ -183,8 +184,8 @@
         </section>
         <section id="gallery" class="gallery">
             <div class="gallery__container container">
-                <div class="gallery__information">
-                    <h2 class="gallery__title title">Галерея</h2>
+                <h2 class="gallery__title title">Галерея</h2>
+                <div class="gallery__content">
                     <div class="gallery__filter gallery-filter">
                         <p class="gallery-filter__text description">Фильтр:</p>
                         <select name="" id="" class="gallery-filter__select">
@@ -193,41 +194,47 @@
                             <option value="sculpture" class="gallery-filter__option">Скульптура</option>
                         </select>
                     </div>
-                    <p class="gallery__text description">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний
+                    <div class="gallery__pictures gallery-pictures">
+                        <div class="gallery__slider gallery-slider">
+                            <button class="btn__prev btn"></button>
+                            <span class="gallery-slider__count">1 / 2</span>
+                            <button class="btn__next btn"></button>
+                        </div>
+                        <div class="gallery-pictures__wrapper">
+                            <ol class="gallery__list gallery-pictures__list-painting">
+                                <li class="gallery__item">1</li>
+                                <li class="gallery__item">2</li>
+                                <li class="gallery__item">3</li>
+                                <li class="gallery__item">4</li>
+                                <li class="gallery__item">5</li>
+                                <li class="gallery__item">6</li>
+                                <li class="gallery__item">7</li>
+                                <li class="gallery__item">8</li>
+                                <li class="gallery__item">9</li>
+                                <li class="gallery__item">10</li>
+                                <li class="gallery__item">11</li>
+                                <li class="gallery__item">12</li>
+                            </ol>
+                            <ol class="gallery__list gallery-pictures__list-drawing">
+                                <li class="gallery__item">1</li>
+                                <li class="gallery__item">2</li>
+                                <li class="gallery__item">test</li>
+                                <li class="gallery__item">4</li>
+                                <li class="gallery__item">5</li>
+                                <li class="gallery__item">6</li>
+                            </ol>
+                            <ol class="gallery__list gallery-pictures__list-sculpture">
+                                <li class="gallery__item">1</li>
+                                <li class="gallery__item">2</li>
+                                <li class="gallery__item">35</li>
+                                <li class="gallery__item">4</li>
+                                <li class="gallery__item">5</li>
+                                <li class="gallery__item">6</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p class="gallery__text description">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
                         <a href="#" class="strong-link link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
-                </div>
-                <div class="gallery__pictures gallery-pictures">
-                    <div class="gallery__slider gallery-slider">
-                        <button class="btn__prev btn"></button>
-                        <span class="gallery-slider__count">1 / 2</span>
-                        <button class="btn__next btn"></button>
-                    </div>
-                    <div class="gallery-pictures__wrapper">
-                        <ol class="gallery__list gallery-pictures__list-painting">
-                            <li class="gallery__item">1</li>
-                            <li class="gallery__item">2</li>
-                            <li class="gallery__item">3</li>
-                            <li class="gallery__item">4</li>
-                            <li class="gallery__item">5</li>
-                            <li class="gallery__item">6</li>
-                        </ol>
-                        <ol class="gallery__list gallery-pictures__list-drawing">
-                            <li class="gallery__item">1</li>
-                            <li class="gallery__item">2</li>
-                            <li class="gallery__item">test</li>
-                            <li class="gallery__item">4</li>
-                            <li class="gallery__item">5</li>
-                            <li class="gallery__item">6</li>
-                        </ol>
-                        <ol class="gallery__list gallery-pictures__list-sculpture">
-                            <li class="gallery__item">1</li>
-                            <li class="gallery__item">2</li>
-                            <li class="gallery__item">35</li>
-                            <li class="gallery__item">4</li>
-                            <li class="gallery__item">5</li>
-                            <li class="gallery__item">6</li>
-                        </ol>
-                    </div>
                 </div>
             </div>
         </section>
@@ -270,7 +277,7 @@
                 </div>
                 <p class="catalog__text description">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.</p>
                 <div class="catalog__main-wrapper">
-                    <div class="catalog__person-information catalog-person-information">
+                    <div id="catalog-person-information" class="catalog__person-information catalog-person-information">
                         <picture class="catalog-person-information__img">
                             <source media="(max-width:1465px)" srcset="img/personIMG1400.jpg">
                             <img src="img/personIMG.jpg" alt="Доменико Гирландайо">
@@ -285,44 +292,44 @@
                                 <p class="catalog-person-select__text">C <time datetime="1400">1400 </time>по <time datetime="1499">1499 </time>гг.</p>
                                 <div class="catalog-person-container">
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
                                         </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
                                     </ol>
                                     <ol class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
                                     </ol>
                                 </div>
                             </li>
@@ -653,85 +660,85 @@
                         <h4 class="edition-form__title">Категории</h4>
                         <ol class="edition-form__list list">
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="bestsellers">
                                     <span class="edition-form-item__text">Бестселлеры</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="art">
                                     <span class="edition-form-item__text">Искусство</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="architecture">
                                     <span class="edition-form-item__text">Архитектура</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="architecture">
                                     <span class="edition-form-item__text">Архитектура</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="design">
                                     <span class="edition-form-item__text">Дизайн</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="fashion">
                                     <span class="edition-form-item__text">Мода</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="children">
                                     <span class="edition-form-item__text">Детям</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="fiction">
                                     <span class="edition-form-item__text">Художественная литература</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="journalism">
                                     <span class="edition-form-item__text">Публицистика</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="guides">
                                     <span class="edition-form-item__text">Путеводители</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="guides">
                                     <span class="edition-form-item__text">Путеводители</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="philosophy">
                                     <span class="edition-form-item__text">Философия</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="educational">
                                     <span class="edition-form-item__text">Учебная литература</span>
                                 </label>
                             </li>
                             <li class="edition-form__item edition-form-item">
-                                <label>
+                                <label class="edition__label edition-form__label">
                                     <input type="checkbox" class="edition-form-item__input" name="newspapers">
                                     <span class="edition-form-item__text">Журналы и газеты</span>
                                 </label>
@@ -787,7 +794,7 @@
         <section id="project" class="project">
             <div class="project__container container">
                 <h2 class="project__title title">Проекты</h2>
-                <p class="project__text project-text description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистско <span class="project-text__tool-tip tool-tip" title="Пример современных тенденций - современная методология разработки"><span class="tool-tip__text" aria-hidden="true">Пример современных тенденций - современная методология разработки</span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="project-text__tool-tip tool-tip" title="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"><span class="tool-tip__text" aria-hidden="true">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="project-text__tool-tip tool-tip" title="В стремлении повысить качество "><span class="tool-tip__text" aria-hidden="true">В стремлении повысить качество </span></span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#about" class="project__link">blanchard-art.ru/projects/about</a></p>
+                <p class="project__text project-text description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистско <button class="project-text__tool-tip tool-tip btn" aria-label="This is a tooltip"><span class="tool-tip__text">Пример современных тенденций - современная методология разработки</span></button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="project-text__tool-tip tool-tip btn" aria-label="This is a tooltip"><span class="tool-tip__text">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></button> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых <button class="project-text__tool-tip tool-tip btn" aria-label="This is a tooltip"><span class="tool-tip__text">В стремлении повысить качество </span></button> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: <a href="#about" class="project__link">blanchard-art.ru/projects/about</a></p>
                 <div class="project__partners project-partners">
                     <h3 class="project-partners__title">Партнёры проектов:</h3>
                     <div class="project-partners__content">
@@ -834,7 +841,7 @@
                 <div class="contacts__main-content">
                     <h3 class="contacts__address-title address-title">Шоурум №4 <span class="address-title__span">Леонтьевский переулок, дом 5/1</span></h3>
                     <div class="contacts__map">
-                        <iframe src="https://maps.google.com/maps?q=55.75912400276326,37.60275905263654&z=16&output=embed" height="100%" width="100%" style="border:0" loading="lazy"></iframe>
+<!--                        <iframe src="https://maps.google.com/maps?q=55.75912400276326,37.60275905263654&z=16&output=embed" height="100%" width="100%" style="border:0" loading="lazy"></iframe>-->
                     </div>
                     <form class="contacts__form contacts-form">
                         <h4 class="contacts-form__title">Заказать обратный звонок</h4>
