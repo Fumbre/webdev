@@ -1401,6 +1401,7 @@ body {
 .catalog-country__img {
     width: 46px;
     height: 46px;
+    border-radius: 50%;
 }
 
 .catalog-country__input {
