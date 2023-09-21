@@ -48,12 +48,12 @@
                 }
                 itemTransform(item);
             }
-        }else if(btn.classList.contains('btn__next')) {
+        }else if(btn.classList.contains('btn-next')) {
             buttonCount >= availableClick() ? buttonCount = 0 : buttonCount++ ;
             for(const item of list.children) {
                 itemTransform(item);
             }
-        }else if(btn.classList.contains('btn__prev')) {
+        }else if(btn.classList.contains('btn-prev')) {
             buttonCount > 0 ? buttonCount-- : buttonCount = availableClick();
             for(const item of list.children) {
                 itemTransform(item);

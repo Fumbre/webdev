@@ -25,6 +25,11 @@
         --contacts-contentWidth: 487px;
     }
 
+    .container {
+        margin: 0 var(--pageMargin);
+        max-width: unset;
+    }
+
     /* edition */
     .edition-offers__title,
     .edition-offers__text {

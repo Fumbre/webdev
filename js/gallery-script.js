@@ -151,7 +151,7 @@
         lists.forEach((list)=>{
             for(const item of list.children) {
                 item.addEventListener('click', (event)=>{
-                    toShow(event.currentTarget.classList[1]);
+                    toShow(event.currentTarget.getAttribute('data-path'));
                 });
             }          
         });
