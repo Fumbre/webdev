@@ -53,7 +53,8 @@ ymaps.ready(init);
       });
       myMap.controls.add(geolocationControl);
       
-      myMap.geoObjects.add(myCircle)
+      myMap.geoObjects.add(myCircle);
+      myMap.behaviors.disable('scrollZoom');
     }
 
 

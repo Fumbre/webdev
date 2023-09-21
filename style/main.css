@@ -98,7 +98,8 @@ body {
 /*---global----*/
 
 .container {
-    margin: auto var(--pageMargin);
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .logo,
@@ -195,8 +196,8 @@ body {
     border-color: #D1A9F0;
 }
 
-.btn__prev,
-.btn__next {
+.btn-prev,
+.btn-next {
     position:relative;
     height: 30px;
     width: 30px;
@@ -206,8 +207,8 @@ body {
     transition: background-color .3s ease;
 }
 
-.btn__prev::before,
-.btn__next::before {
+.btn-prev::before,
+.btn-next::before {
     position: absolute;
     content: '';
     top: 50%;
@@ -218,35 +219,35 @@ body {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.btn__prev::before {
+.btn-prev::before {
     border-right-color: transparent;
     border-top-color: transparent;
 }
 
-.btn__next::before {
+.btn-next::before {
     border-left-color: transparent;
     border-bottom-color: transparent;
 }
 
-.btn__prev:focus-visible,
-.btn__next:focus-visible {
+.btn-prev:focus-visible,
+.btn-next:focus-visible {
     box-shadow: 0 0 0 2px #000 ;
     outline: none;
 }   
 
-.btn__prev:hover,
-.btn__next:hover {
+.btn-prev:hover,
+.btn-next:hover {
     background-color: var(--secondColor);
 }   
 
-.btn__prev:active,
-.btn__next:active {
+.btn-prev:active,
+.btn-next:active {
     background-color: var(--focusColor);
     box-shadow: 0 0 0 2px #000;
 } 
 
-.btn__prev:disabled,
-.btn__next:disabled {
+.btn-prev:disabled,
+.btn-next:disabled {
     background-color: rgb(179 179 179);
     box-shadow: none;
     cursor: default;
@@ -458,7 +459,7 @@ body {
 
 /*aside*/
 
-.ads {
+.hero {
     position: relative;
 }
 
@@ -1078,6 +1079,7 @@ body {
 }
 
 .gallery__item {
+    overflow: hidden;
     position: relative;
     margin-right: var(--galleryItemMargin);
     height: calc((100% - ( var(--galleryItemMargin) * (var(--galleryRowCount) - 1) ) ) / var(--galleryRowCount));
@@ -1088,6 +1090,12 @@ body {
     background-position: center;
     transition: transform .3s ease-in;
     cursor: pointer;
+}
+
+.gallery__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 
 .gallery-pictures__list--active {
@@ -1115,12 +1123,15 @@ body {
 .gallery__item::after {
     position: absolute;
     content: '';
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     color: rgba(194, 131, 243, 0.4);
     background-color: currentColor;
     opacity: 0;
-    transition: opacity .3s ease-in;
+    transition: opacity .2s ease-in;
+    transform: translate(0, 0);
 }
 
 .gallery__item:hover::before {
@@ -1129,7 +1140,7 @@ body {
 
 .gallery__item:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px var(--focusColor) inset;
+    border: solid 3px var(--focusColor);
 }
 
 .gallery__item:active::after {
@@ -1137,7 +1148,7 @@ body {
 }
 
 .gallery__item:active {
-    box-shadow: 0 0 0 3px #D1A9F0 inset;
+    border: solid 3px #D1A9F0;
 }
 
 
@@ -1255,82 +1266,6 @@ body {
 
 .gallery-item-content__btn::before {
     transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-/* gallery-pictures__painting */
-
-.gallery-pictures__item-painting1 {
-    background-image: url(../img/gallery/gallery-painting/pic2.jpg);
-}
-
-.gallery-pictures__item-painting2 {
-    background-image: url(../img/gallery/gallery-painting/pic3.jpg);
-}
-
-.gallery-pictures__item-painting3 {
-    background-image: url(../img/gallery/gallery-painting/pic1.jpg);
-}
-
-.gallery-pictures__item-painting4 {
-    background-image: url(../img/gallery/gallery-painting/pic4.jpg);
-}
-
-.gallery-pictures__item-painting5 {
-    background-image: url(../img/gallery/gallery-painting/pic5.jpg);
-}
-
-.gallery-pictures__item-painting6 {
-    background-image: url(../img/gallery/gallery-painting/pic6.jpg);
-}
-
-.gallery-pictures__item-painting7 {
-    background-image: url(../img/gallery/gallery-painting/pic7.jpg);
-}
-
-.gallery-pictures__item-painting8 {
-    background-image: url(../img/gallery/gallery-painting/pic8.jpg);
-}
-
-.gallery-pictures__item-painting9 {
-    background-image: url(../img/gallery/gallery-painting/pic9.jpg);
-}
-
-.gallery-pictures__item-painting10 {
-    background-image: url(../img/gallery/gallery-painting/pic10.jpg);
-}
-
-.gallery-pictures__item-painting11 {
-    background-image: url(../img/gallery/gallery-painting/pic11.jpg);
-}
-
-.gallery-pictures__item-painting12 {
-    background-image: url(../img/gallery/gallery-painting/pic12.jpg);
-}
-
-/* gallery-pictures__drawing */
-
-.gallery-pictures__item-drawing1 {
-    background-image: url(../img/gallery/gallery-drawing/pic1.jpg);
-}
-
-.gallery-pictures__item-drawing2 {
-    background-image: url(../img/gallery/gallery-drawing/pic2.jpg);
-}
-
-.gallery-pictures__item-drawing3 {
-    background-image: url(../img/gallery/gallery-drawing/pic3.jpg);
-}
-
-.gallery-pictures__item-drawing4 {
-    background-image: url(../img/gallery/gallery-drawing/pic4.jpg);
-}
-
-.gallery-pictures__item-drawing5 {
-    background-image: url(../img/gallery/gallery-drawing/pic5.jpg);
-}
-
-.gallery-pictures__item-drawing6 {
-    background-image: url(../img/gallery/gallery-drawing/pic6.jpg);
 }
 
 /* gallery-pictures__sculpture */
@@ -1483,6 +1418,7 @@ body {
 
 .catalog-person-select__text {
     position: relative;
+    display: block;
     margin: 0;
     padding: 41px 0;
     border-top: 1px solid #CACACA;
@@ -1492,6 +1428,7 @@ body {
     line-height: 32px;
     color: var(--textColor);
     transition: border-color .3s ease, color .3s ease;
+    cursor: pointer;
 }
 
 .catalog-person-select__text-decoration {
@@ -2275,11 +2212,11 @@ body {
     box-shadow: 0 0 0 2px var(--secondColor);
 }
 
-.project-partners__btn.btn__prev{
+.project-partners__btn.btn-prev{
     left: 0;
 }
 
-.project-partners__btn.btn__next{
+.project-partners__btn.btn-next{
     right: 0;
 }
 
@@ -2321,9 +2258,13 @@ body {
 
 .contacts__main {
     position: relative;
+    margin: 0 auto;
     padding-top: 124px;
     padding-bottom: 113px;
+    max-width: 1920px;
     border: solid 1px var(--greyColor);
+    border-left-color: transparent;
+    border-right-color: transparent;
 }
 
 .contacts__main-content {
@@ -2335,6 +2276,7 @@ body {
     position: absolute;
     top:0;
     right: 0;
+    /* width: 20px; */
     width: calc(100% - var(--pageMargin) - var(--contacts-contentWidth));
     height: 100%;
     border-left: solid 1px var(--greyColor);
