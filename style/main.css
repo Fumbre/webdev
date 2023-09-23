@@ -373,6 +373,7 @@ body {
 }
 
 .header-nav__list {
+    flex-wrap: wrap;
     max-width: 896px;
 }
 
@@ -764,6 +765,7 @@ body {
 .mail-subscribe {
     position: relative;
     padding-top: 133px;
+    padding-bottom: 45px;
     min-height: var(--mailSubscribeMinHeight);
     width: 100%;
 }
@@ -925,6 +927,7 @@ body {
 
 .gallery__filter {
     order: -1;
+    max-width: var(--galleryInformationMaxWidth);
 }
 
 .gallery__text {
@@ -954,7 +957,7 @@ body {
 .gallery-filter__option {
     display: none;
     z-index: 1;
-    height: var(--galleryFilterItemHeight);
+    min-height: var(--galleryFilterItemHeight);
     border-top: solid var(--galleryFilterBorder) #999;
     transition: background-color .3s ease-in-out;
 }
@@ -992,11 +995,13 @@ body {
 .gallery-filter__title {
     display: block;
     margin-bottom: 5px;
+    word-break: break-all;
     color: var(--firstColor);
 }
 
 .gallery-filter__text {
     position: relative;
+    word-break: break-all;
     text-indent: 20px;
     color: #999;
     user-select: none;
@@ -1267,33 +1272,6 @@ body {
 .gallery-item-content__btn::before {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-/* gallery-pictures__sculpture */
-
-.gallery-pictures__item-sculpture1 {
-    background-image: url(../img/gallery/gallery-sculpture/pic1.jpg);
-}
-
-.gallery-pictures__item-sculpture2 {
-    background-image: url(../img/gallery/gallery-sculpture/pic2.jpg);
-}
-
-.gallery-pictures__item-sculpture3 {
-    background-image: url(../img/gallery/gallery-sculpture/pic3.jpg);
-}
-
-.gallery-pictures__item-sculpture4 {
-    background-image: url(../img/gallery/gallery-sculpture/pic4.jpg);
-}
-
-.gallery-pictures__item-sculpture5 {
-    background-image: url(../img/gallery/gallery-sculpture/pic5.jpg);
-}
-
-.gallery-pictures__item-sculpture6 {
-    background-image: url(../img/gallery/gallery-sculpture/pic6.jpg);
-}
-
 
 /*catalog*/
 
@@ -2276,7 +2254,6 @@ body {
     position: absolute;
     top:0;
     right: 0;
-    /* width: 20px; */
     width: calc(100% - var(--pageMargin) - var(--contacts-contentWidth));
     height: 100%;
     border-left: solid 1px var(--greyColor);

@@ -80,10 +80,17 @@
 
     function filter(){
         const list = container.querySelector('.gallery-filter__select');
+        
+        function setItemHeight() {
+            const selectedItem = container.querySelector('.gallery-filter__option--selected');
+            selectedItem.style.setProperty('--galleryFilterItemHeight', selectedItem.offsetHeight + "px");
+        }
+
         function showItem(){
             for(const item of list.children) {
                 item.classList.toggle('gallery-filter__option--show');
             }
+            setItemHeight();
         }
 
         function selectItem(event) {
