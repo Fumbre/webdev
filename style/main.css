@@ -1747,6 +1747,16 @@ body {
     background-color: #666;
 }
 
+.roll__btn {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff00;
+}
+
 .events__btn {
     display: flex;
     margin: 0 auto;
