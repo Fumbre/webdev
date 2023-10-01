@@ -1,8 +1,13 @@
+import inputmask from '../lib/Inputmask/dist/inputmask.es6.js';
+
 (()=>{
 
     const inputName = document.getElementById('name');
     const inputPhone = document.getElementById('phone');
     const form = document.getElementById('contacts__form');
+
+    let mask = new inputmask("+0 (999) 999 9999");
+    mask.mask(inputPhone);
 
     function isAddClass (input){
         const check = input === inputName ? validateName(inputName) : validatePhone(inputPhone);
@@ -14,20 +19,10 @@
         }
     }
 
-
-    inputName.addEventListener('change', ()=>{
-        isAddClass(inputName);
-    })
-
-    inputPhone.addEventListener('change', ()=>{
-        isAddClass(inputPhone);
-    })
-
-
     function validateName (input){
         let inputValue = input.value;
         let index = 0;
-        for(inputLetter of inputValue){
+        for(const inputLetter of inputValue){
             if(inputLetter.toUpperCase(inputLetter) === inputLetter.toLowerCase(inputLetter)){
                 return false;
             }
@@ -43,9 +38,9 @@
     }
 
     function validatePhone (input){
-        let inputValue = input.value;
+        let inputValue = input.inputmask.unmaskedvalue();
         let index = 0;
-        for(inputLetter of inputValue){
+        for(const inputLetter of inputValue){
             if (inputLetter === " "){
                 return false;
             }
@@ -81,9 +76,18 @@
         
     }
 
-    form.addEventListener('submit', (event)=>{
-        submitChecker(event);
+    window.addEventListener('DOMContentLoaded', ()=>{
+        inputName.addEventListener('change', ()=>{
+            isAddClass(inputName);
+        });
+    
+        inputPhone.addEventListener('change', ()=>{
+            isAddClass(inputPhone);
+        });
+
+        form.addEventListener('submit', (event)=>{
+            submitChecker(event);
+        })
+
     })
-
-
 })();
