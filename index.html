@@ -12,11 +12,12 @@
     <script defer src="js/partners-rolo.js"></script>
     <script defer src="js/gallery-script.js"></script>
     <script defer src="js/accardion.js"></script>
+    <script defer src="js/catalog-tab.js"></script>
     <script defer src="js/events-more.js"></script>
     <script defer src="js/edition-offers.js"></script>
     <script defer src="js/tooltip.js"></script>
-    <script defer  src="js/validator.js"></script>
-    <script defer  src="js/wallpaperchanging.js"></script>
+    <script type="module" defer src="js/validator.js"></script>
+    <script defer src="js/wallpaperchanging.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=99097d0d-f035-4b6b-b2eb-235e1142d56a&lang=ru_RU" type="text/javascript"></script>
     <script defer src="js/map.js"></script>
 </head>
@@ -753,17 +754,46 @@
                 <p class="catalog__text description">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.</p>
                 <div class="catalog__main-wrapper">
                     <div id="catalog-person-information" class="catalog__person-information catalog-person-information">
-                        <picture class="catalog-person-information__picture">
-                            <source media="(max-width:470px)" srcset="img/catalog/personIMG470.jpg">
-                            <source media="(max-width:767px)" srcset="img/catalog/personIMG1400.jpg">
-                            <source media="(max-width:1010px)" srcset="img/catalog/personIMG768.jpg">
-                            <source media="(max-width:1488px)" srcset="img/catalog/personIMG1400.jpg">
-                            <img class="catalog-person-information__img" src="img/catalog/personIMG.jpg" alt="Доменико Гирландайо">
-                        </picture>
-                        <h3 class="catalog-person-information__title title">Доменико Гирландайо</h3>
-                        <p class="catalog-person-information__text description"><span class="catalog-person-information__date"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">&nbsp;11&nbsp;января&nbsp;1494.</time></span>
-                            Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
-                    </div>
+                        <div class="catalog-person-information__artist catalog-person-information__artist--active" data-path="artist1">
+                            <picture class="catalog-person-information__picture">
+                                <source media="(max-width:470px)" srcset="img/catalog/personIMG470.jpg">
+                                <source media="(max-width:767px)" srcset="img/catalog/personIMG1400.jpg">
+                                <source media="(max-width:1010px)" srcset="img/catalog/personIMG768.jpg">
+                                <source media="(max-width:1488px)" srcset="img/catalog/personIMG1400.jpg">
+                                <img class="catalog-person-information__img" src="img/catalog/personIMG.jpg" alt="Доменико Гирландайо">
+                            </picture>
+                            <h3 class="catalog-person-information__title title">Доменико Гирландайо</h3>
+                            <p class="catalog-person-information__text description"><span class="catalog-person-information__date"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">&nbsp;11&nbsp;января&nbsp;1494.</time></span>
+                                Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+                        </div>
+                        <div class="catalog-person-information__artist" data-path="artist2">
+                            <picture class="catalog-person-information__picture">
+                                <source media="(max-width:470px)" srcset="img/catalog/personBlank290.jpg">
+                                <source media="(max-width:767px)" srcset="img/catalog/personBlank437.jpg">
+                                <source media="(max-width:1010px)" srcset="img/catalog/personBlank668.jpg">
+                                <source media="(max-width:1488px)" srcset="img/catalog/personBlank437.jpg">
+                                <img class="catalog-person-information__img" src="img/catalog/personBlank750.jpg" alt="Доменико Гирландайо">
+                            </picture>
+                            <h3 class="catalog-person-information__title title">Что мы о нём знаем?</h3>
+                            <p class="catalog-person-information__text description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+                                <br>
+                                <a href="#gallery" class="catalog-person-information__link link">В галерею</a>
+                            </p>
+                            
+                            </div>
+                        <div class="catalog-person-information__artist" data-path="artist3">
+                            <picture class="catalog-person-information__picture">
+                                <source media="(max-width:470px)" srcset="img/catalog/personIMG470.jpg">
+                                <source media="(max-width:767px)" srcset="img/catalog/personIMG1400.jpg">
+                                <source media="(max-width:1010px)" srcset="img/catalog/personIMG768.jpg">
+                                <source media="(max-width:1488px)" srcset="img/catalog/personIMG1400.jpg">
+                                <img class="catalog-person-information__img" src="img/catalog/personIMG.jpg" alt="Бенедетто ди Биндо">
+                            </picture>
+                            <h3 class="catalog-person-information__title title">Бенедетто ди Биндо</h3>
+                            <p class="catalog-person-information__text description"><span class="catalog-person-information__date"><time datetime="1448-06-02">2&nbsp;июня 1448&nbsp;</time>&mdash;<time datetime="1494-01-11">&nbsp;11&nbsp;января&nbsp;1494.</time></span>
+                                Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда», несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались). Обучение он прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился вместе с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей напоминают произведения Джованни да Милано.</p>
+                        </div>
+                      </div>
                     <div class="catalog__person-select catalog-person-select">
                         <ul class="catalog-person-select__list list">
                             <li class="catalog-person-select__item catalog-person-select__item--active">
@@ -774,44 +804,44 @@
                                 </span>
                                 <div class="catalog-person-container">
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist3"><h4 class="catalog-person-container__title description">Бенедетто ди Биндо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Бергоньоне, Амброджо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Биссоло, Франческо</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Больтраффио, Джованни</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Бонсиньори, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Боттичини, Рафаэлло</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Брамантино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Бреа, Людовико</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Бьяджо д’Антонио Туччи</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link catalog-person-container__link--active link"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Веккьетта</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2" data-target="artist2"><h4 class="catalog-person-container__title description">Андреа Верроккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link catalog-person-container__link--active link" data-target="artist1"><h4 class="catalog-person-container__title description">Доменико Гирландайо</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Беноццо Гоццоли</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Граначчи, Франческо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Грегорио ди Чекко</h4></a></li>
                                         </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Джованни да Удине</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Джованни ди Паоло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Джорджоне</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Парентино, Бернардо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Пезеллино</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Пьетро Перуджино</h4></a></li>
                                     </ul>
                                     <ul class="catalog-person-container__lists">
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
-                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Перуцци, Бальдассаре</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Пизанелло</h4></a></li>
+                                        <li class="catalog-person-container__items"><a href="#catalog-person-information" class="catalog-person-container__link link" data-target="artist2"><h4 class="catalog-person-container__title description">Пинтуриккьо</h4></a></li>
                                     </ul>
                                 </div>
                             </li>

@@ -1,8 +1,7 @@
-
 (()=> {
     
     const container = document.getElementById('project');
-    const btn = container.querySelectorAll('.project-partners__btn');
+    const button = container.querySelectorAll('.project-partners__btn');
 
     let buttonCount = 0;
 
@@ -41,29 +40,39 @@
             });
         }
         
+
+        function toDisableBtn(){
+            button[0].disabled = buttonCount === 0 ;
+            button[1].disabled = buttonCount === availableClick();
+        }
+        
         if(btn === true) {
             for(const item of list.children) {
                 if (buttonCount > availableClick()){
                     buttonCount = availableClick();
                 }
                 itemTransform(item);
+                toDisableBtn();
             }
-        }else if(btn.classList.contains('btn-next')) {
-            buttonCount >= availableClick() ? buttonCount = 0 : buttonCount++ ;
-            for(const item of list.children) {
-                itemTransform(item);
+        }else{
+            if(btn.classList.contains('btn-next')) {
+                buttonCount >= availableClick() ? buttonCount = availableClick() : buttonCount++ ;
+                for(const item of list.children) {
+                    itemTransform(item);
+                }
+            }else {
+                buttonCount > 0 ? buttonCount-- : buttonCount = 0;
+                for(const item of list.children) {
+                    itemTransform(item);
+                }
             }
-        }else if(btn.classList.contains('btn-prev')) {
-            buttonCount > 0 ? buttonCount-- : buttonCount = availableClick();
-            for(const item of list.children) {
-                itemTransform(item);
-            }
+            toDisableBtn();
         }
         
     } swipe(true);
 
     window.addEventListener("DOMContentLoaded", ()=>{
-        btn.forEach((b)=>{
+        button.forEach((b)=>{
             b.addEventListener('click', ()=>{
                 swipe(b)
             });
